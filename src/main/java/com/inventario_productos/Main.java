@@ -7,13 +7,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("\nIngrese la cantidad de categorías: ");
+        while (!sc.hasNextInt()) {
+            System.err.println("Error: Debe Ingresar un numero.");
+            sc.next();
+            System.out.print("\nIngrese la cantidad de categorías: ");
+        }
         int categorias = sc.nextInt();
         sc.nextLine();
     
         Map<String, List<String>> inventario = new HashMap<>();
 
         for (int i = 0; i < categorias; i++) {
-            System.out.print("Ingrese el nombre de la categoría " + (i+1) + ": ");
+            System.out.print("Ingrese el nombre de la categoría " + (i + 1) + ": ");
             String categoria = sc.nextLine();
 
             List<String> productos = new ArrayList<>();
@@ -85,7 +90,7 @@ public class Main {
                 case 3:
                     System.out.println("Lista completa de productos y su categoría: ");
                     for (Map.Entry<String, List<String>> entry : inventario.entrySet()) {
-                        System.out.println("Categoría: \n" + entry.getKey());
+                        System.out.println("Categoría: " + entry.getKey());
                         System.out.println("Productos: ");
                         for (String producto : entry.getValue()) {
                             System.out.println("- " + producto);
