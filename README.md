@@ -1,5 +1,5 @@
 # Taller Java
-# 🚀 Ejercicio #2 Inventario de Productos con Map y List
+# 🚀 Ejercicio #3 Inventario de Productos con Map y List
 ## 📌 Propósito
 Este programa en Java permite gestionar un inventario de productos organizados por categorías. Utiliza una estructura de datos Map`<String, List<String>>` para almacenar categorías y sus respectivos productos. El programa permite:
 
